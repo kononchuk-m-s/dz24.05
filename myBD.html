@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         body {
+            font-family:sans-serif;
+            color: rgb(96, 145, 94);         
+         }
+
+     </style>
+ </head>
+ <body> 
+<h1> Уррра!!!! Осталось всего.... </h1>
+    <script>
+
+        let nowDate = new Date ();
+        let bd = new Date (2020, 5, 11)
+        let result = (bd-nowDate);
+        let d = Math.floor (result/1000/60/60/24) > 5 ? Math.floor (result/1000/60/60/24) +" "+'дней': Math.floor (result/1000/60/60/24) +" "+'дня'; 
+        let h = Math.floor ((result/1000/60/60)%24) < 10 ? '0'+ Math.floor ((result/1000/60/60)%24) : Math.floor ((result/1000/60/60)%24);
+        let m = Math.floor ((result/1000/60)%60) < 10 ? '0'+ Math.floor ((result/1000/60)%60) : Math.floor ((result/1000/60)%60);
+        let s = Math.floor ((result/1000)%60) < 10 ? '0'+ Math.floor ((result/1000)%60) : Math.floor ((result/1000)%60);
+    
+        document.write (`${d} ${h}:${m}:${s}`);
+
+    
+    </script>
+ </body>
+ </html>
